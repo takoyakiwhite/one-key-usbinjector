@@ -46,7 +46,7 @@ cat <<EEF
 
            with USBInjectAll Modified
 
-           present for my friends :)
+          the present for my friends :)
                 
                @Takoyaki White
                                            
