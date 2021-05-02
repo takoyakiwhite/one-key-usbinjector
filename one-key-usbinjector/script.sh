@@ -120,7 +120,7 @@ if [ ! -f "$currentefi" ]; then
     echo
     printf "\033c"
     echo   
-    echo "如Hackintool辅助工具未主动打开，请手动运行！"
+    echo "如MountEFI辅助工具未主动打开，请手动运行！"
     echo
     echo "请挂载OpenCore的EFI引导分区（选择磁盘里有OpenCore字样的数字即可）"
     open $currentdir/tools/MountEFI.app
