@@ -27,13 +27,17 @@ by 「Takoyaki White」
 
 Credit：
 
-https://github.com/headkaze/Hackintool （Hackintool辅助工具）
+https://github.com/headkaze/Hackintool 
+（Hackintool辅助工具）
 
-https://github.com/Andrej-Antipov/MountEFI（EFI挂载工具）
+https://github.com/Andrej-Antipov/MountEFI
+（EFI挂载工具）
 
-https://github.com/takoyakiwhite/USBInjectAll-Mod（USBInjectAll修改版）
+https://github.com/takoyakiwhite/USBInjectAll-Mod
+（USBInjectAll修改版）
 
-https://github.com/xzhih/one-key-hidpi（一些灵感）
+https://github.com/xzhih/one-key-hidpi
+（一些灵感）
 
 
 Thanks for my friends:)
