@@ -2,6 +2,7 @@
 # by Takoyaki White @Simpleの白
 # Thanks for one-key-hidpi @Github
 
+systemLanguage=($(locale | grep LANG | sed s/'LANG='// | tr -d '"' | cut -d "." -f 1))
 rm -rf tmp
 rm -rf output
 echo "\033]0;one-key-usbinjector\007"
@@ -12,14 +13,23 @@ origiousb=$(ioreg -c IOUSBDevice -w0)
 model=`echo $origmodel | sed -r 's/hw.model: //g'`
 iousb2=`echo $origiousb | grep -ho 'HS[0-9]\{2\}'`
 iousb3=`echo $origiousb | grep -ho 'SS[0-9]\{2\}'`
-whatsyourchoice="你的选择是："
-whatstrushport="输入无用端口（格式如HS01或SS01，输完回车，如全部输入完毕，直接回车即可）："
+whatsyourchoice="What's your choice?"
+whatstrushport="Enter a useless port (format such as HS01 or SS01, press Enter after inputting, if all input is completed, press Enter directly) ："
 hackintool="$currentdir/tools/Hackintool.app"
 mountefi="$currentdir/tools/MountEFI.app"
+select1="Generate USB configuration"
+select2="View current port"
+select3="11.3 Patch"
+select4="Exit"
+
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
 select1="定制USB"
 select2="查看当前端口"
 select3="11.3一键修复"
 select4="退出"
+whatsyourchoice="你的选择是："
+whatstrushport="输入无用端口（格式如HS01或SS01，输完回车，如全部输入完毕，直接回车即可）："
+fi
 
 if [ ! -d "$hackintool" ]; then
     printf "\033c"
