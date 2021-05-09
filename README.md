@@ -1,4 +1,52 @@
 # one-key-usbinjector
+
+English：
+
+the present for my friends :)
+
+Script production time: 8 minutes
+
+For my friend
+
+QQ exchange group: 775619272/976273254
+
+by "Takoyaki White"
+
+Author's words: This is a script written entirely using Shell commands (for macOS). In fact, it can be completely implemented with Shell. Due to time issues (touch fish qwq), some ready-made auxiliary tools are used to perform some operations. Theory The above is applicable to all models, only published on Github/Coolapk/PCBeta, please indicate when reprinting
+
+Use teaching:
+
+The first step: run the command script (please manually enter the password to get root, the password is not displayed)
+
+Step 2: Check the current ports (if the total number of USB ports is more than 15, please see the third step, please skip the third step if it does not exceed or happens to be)
+
+Step 3: Customize the USB, the script will automatically open Hackintool, please enter the USB bar of Hackintool, then please plug in all your USB ports (USB2.0、USB3.0 needs to be plugged into USB2.0 and USB3.0 devices separately、TypeC), Hackintool will mark the connected port green after the insertion is complete. Please write down the useless ports that have not changed (white) and enter them into the script respectively. For example, enter HS01 and press Enter, and the script will automatically record what you have entered After confirming that it is correct, press Enter, the script will automatically modify USBInjectAll (Modified by @Takoyaki White), please replace it under EFI/OC/Kext (can be used with XHCI-Injector under sources)
+
+"If you want to upgrade to 11.3 and there are still more than 15 USB ports after customization, please discard some unnecessary ports."
+
+Step 4: Upgrading 11.3 may encounter USB abnormal problems. This is because the 15-port restriction patch under 11.3 has become invalid. Don’t worry, we have customized the USB in the third step. This is no problem. The script will help you. To automatically close this patch, please perform one-click repair in 11.3. If you have not mounted EFI at this time, please check the disk with OpenCore in the pop-up MountEFI, and enter the number where it is located, enter the password to increase the privilege, and you can successfully mount After the installation is complete, please continue, the script will automatically close the patch that has taken effect
+
+Step 5: Feel free to upgrade or use it~~~
+
+Credit:
+
+https://github.com/headkaze/Hackintool
+(Hackintool auxiliary tool)
+
+https://github.com/Andrej-Antipov/MountEFI
+(EFI mount tool)
+
+https://github.com/takoyakiwhite/USBInjectAll-Mod
+(USBInjectAll modified version)
+
+https://github.com/xzhih/one-key-hidpi
+(Some inspiration)
+
+
+Thanks for my friends:)
+
+Chinese（中文）：
+
  the present for my friends :)
 
 脚本制作用时：8分钟
