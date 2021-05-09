@@ -42,8 +42,9 @@ https://github.com/takoyakiwhite/USBInjectAll-Mod
 https://github.com/xzhih/one-key-hidpi
 (Some inspiration)
 
-
 Thanks for my friends:)
+
+***
 
 Chinese（中文）：
 
