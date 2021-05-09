@@ -1,6 +1,7 @@
 #!/bin/bash
 # by Takoyaki White @Simpleの白
 # Thanks for one-key-hidpi @Github
+# English description comes from Google Translate:)
 
 systemLanguage=($(locale | grep LANG | sed s/'LANG='// | tr -d '"' | cut -d "." -f 1))
 rm -rf tmp
@@ -34,7 +35,11 @@ fi
 if [ ! -d "$hackintool" ]; then
     printf "\033c"
     echo
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
     echo "未发现Hackintool辅助工具!"
+else
+    echo "Hackintool not found!"
+fi
     echo
     exit 1
 fi
@@ -42,7 +47,11 @@ fi
 if [ ! -d "$mountefi" ]; then
     printf "\033c"
     echo
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
     echo "未发现MountEFI辅助工具!"
+else
+    echo "MountEFI not found!"
+fi
     echo
     exit 1
 fi
@@ -66,22 +75,45 @@ EEF
 function start() {
     printf "\033c"
     echo
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
     echo "当前机型：$model"
+else
+    echo "Current Model：$model"
+fi
     echo
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
     echo "HS端口：
 $iousb2"
+else
+    echo "HS Ports：
+$iousb2"
+fi
     echo
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
     echo "SS端口：
 $iousb3"
+else
+    echo "SS Ports：
+$iousb3"
+fi
 sleep 5
 open $currentdir/tools/Hackintool.app
 mkdir -p $currentdir/tmp
 cp -rf $currentdir/sources/USBInjectAll $currentdir/tmp/USBInjectAll
 echo
-echo "如Hackintool辅助工具未主动打开，请手动运行！"
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
+    echo "如Hackintool辅助工具未主动打开，请手动运行！"
+else
+    echo "If the Hackintool auxiliary tool is not opened actively, please run it manually! "
+fi
 echo
-echo "进入Hackintool/USB栏下，插满计算机的所有USB/Type-C接口"
-echo "（提醒：绿色为已插入，白色无用）"
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
+    echo "进入Hackintool/USB栏下，插满计算机的所有USB/Type-C接口"
+    echo "（提醒：绿色为已插入，白色无用）"
+else
+    echo "Enter the Hackintool/USB column, plug in all the USB/Type-C ports of the computer. "
+    echo "(Reminder: Green is inserted, White is useless)"
+fi
 echo
     printf "\033c"
     echo.>>$currentdir/tmp/usbport.txt
@@ -111,13 +143,27 @@ exit 1
 function usblist() {
     printf "\033c"
     echo
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
     echo "当前机型：$model"
-    echo
+else
+    echo "Current Model：$model"
+fi
+echo
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
     echo "HS端口：
 $iousb2"
-    echo
+else
+    echo "HS Ports：
+$iousb2"
+fi
+echo
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
     echo "SS端口：
 $iousb3"
+else
+    echo "SS Ports：
+$iousb3"
+fi
 echo
 main
 }
@@ -126,16 +172,32 @@ function xhciportlimit() {
 if [ ! -f "$currentefi" ]; then
     printf "\033c"
     echo
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
     echo "未发现OpenCore引导分区!"
+else
+    echo "No OpenCore boot partition found!"
+fi
     echo
     printf "\033c"
     echo   
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
     echo "如MountEFI辅助工具未主动打开，请手动运行！"
+else
+    echo "If the MountEFI auxiliary tool is not actively opened, please run it manually!"
+fi
     echo
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
     echo "请挂载OpenCore的EFI引导分区（选择磁盘里有OpenCore字样的数字即可）"
+else
+    echo "Please mount OpenCore's EFI boot partition (select the number with OpenCore in the disk) "
+fi
     open $currentdir/tools/MountEFI.app
     echo
+if [[ "${systemLanguage}" == "zh_CN" ]]; then
     read -p "如果挂载完毕，请按任意键继续 ..."
+else
+    read -p "If the mounting is complete, press any key to continue..."
+fi
     fi
     if [ ! -f "$currentefi" ]; then
     xhciportlimit
